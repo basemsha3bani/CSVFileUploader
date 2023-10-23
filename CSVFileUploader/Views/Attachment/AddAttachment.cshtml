@@ -1,0 +1,71 @@
+﻿@model Domain.ViewModel.UploadedFileViewModel
+
+
+
+<h2>Add Attachment </h2>
+
+
+<form method="post" enctype="multipart/form-data" id="formUpload">
+    <div class="row">
+        <div class="form-group">
+            @Html.Label("", "Attachment", new { @class = "control-label" })
+            <input type="file" name="fileUpload" id="fileUpload" />
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+
+            <input type="button" id="buttonSubmitFormUpload" value="Post file" />
+         
+        </div>
+    </div>
+</form>
+<div id="divSearchFile" style="display:none">
+    @Html.Partial("SearchAttachment.cshtml")
+</div>
+@section scripts {
+
+    <script>
+       
+        $(document).ready(function () {
+            
+            var url = "@Url.Action("Post", "FileStorage")"
+            
+            $("#buttonSubmitFormUpload").click(function () {
+                var form = $("#formUpload");
+
+                // you can't pass Jquery form it has to be javascript form object
+                var formData = new FormData(form[0]);
+                $.ajax({
+                    url: url,
+                    type: "POST",
+                    data: formData,
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    success: function () {
+                        $("#divSearchFile").css("display", "block")
+                        $("#txtfileName").val($('#fileUpload')[0].files[0].name )
+                    }
+                    ,
+                    error: function (e) {
+                        $("#divSearchFile").css("display", "none")
+                        $("#txtfileName").val("")
+                        showError(e.responseText)
+                       
+                    }
+                   
+                });
+                    })
+                        
+                
+             
+        })
+            
+
+        
+    </script>
+
+}

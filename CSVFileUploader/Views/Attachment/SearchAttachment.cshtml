@@ -1,0 +1,67 @@
+﻿
+<form method="post" id="formSearch" >
+    <div class="row">
+        <div class="form-group">
+            @Html.Label("", "fileName", new { @class = "control-label" })
+            <input type="text" name="fileName" id="txtfileName" />
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="form-group">
+            @Html.Label("", "SearchText", new { @class = "control-label" })
+            <input type="text" name="SearchText" id="txtSearchText" />
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="form-group">
+
+            <input type="button" id="buttonSubmitFormSearch" value="Search File " />
+
+        </div>
+    </div>
+</form>
+@section scripts {
+    <script>
+
+        $(document).ready(function () {
+
+            var url = "@Url.Action("SearchFile", "FileStorage")"
+
+            $("#buttonSubmitFormSearch").click(function () {
+                
+
+
+
+                var formData = {
+                    fileName: $("#txtfileName").val(),
+                    SearchText: $("#txtSearchText").val(),
+                    
+                };
+                console.log(formData)
+                $.ajax({
+                    type: 'POST',
+                    url: url,
+                   
+                    data: formData,
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    success: function (result) {
+                        alert('Successfully received Data ');
+                        console.log(result);
+                    },
+                    error: function () {
+                        alert('Failed to receive the Data');
+                        console.log('Failed ');
+                    }
+                })
+            })
+
+        })
+    
+
+    </script>
+    
+}
