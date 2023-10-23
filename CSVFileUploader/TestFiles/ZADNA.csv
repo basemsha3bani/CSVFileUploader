@@ -1,0 +1,40 @@
+﻿ID,Work Item Type,Title,Assigned To,State,Tags,Severity,Status,Reason
+451265,Bug,Consumers Website/ Consumers User Management / Forget Password/Incorrect template and link for the received email.,Basem Al-Shabani,New,Maestro,1 - Critical,Done,wrong template id 
+438041,Bug,Consumers Portal\ Establishment Map Search: The search on map does not work.,Ammar Alnaimat,New,Configuration; Maestro,1 - Critical,Done,Plugin not deployed to server
+455609,Bug,Consumers Portal\ Establishment Map Search: The rating details in map search is not working.,Ammar Alnaimat,New,Configuration; Maestro,1 - Critical,Configuration,invalid page routing
+459466,Bug,All Portal's/ User Management / Forget Password// Reset password from Establishment Portl Or Consumer Portal Or Backoffice Changing Studio User Password,Ammar Alnaimat,New,Maestro,1 - Critical,Not Bug,Discus with Anas - when reset password from portal also change from studio
+459807,Bug,Consumer Portal / Sign up: An error message appears when click on the sign up button.,Ammar Alnaimat,New,Maestro,2 - High,,Bug not existed
+458766,Bug,"Consumer Portal / Favorite list: The system is crashed when the user click on ""Remove from favorite list"" many times.",Ammar Alnaimat,New,Maestro,2 - High,Bug,
+438205,Bug,All Portals \ View Profile: The user should be able to delete the profile picture.,Ammar Alnaimat,New,Maestro,2 - High,,Discus with Anas 
+451278,Bug,Consumers Website / Consumers User Management / View Consumer Profile/ Can't modify or add number after delete it for the phone number field.,Ammar Alnaimat,New,Maestro,2 - High,Bug,Discus with Anas 
+451521,Bug,Consumers Website/ Establishments / Establishment Normal Search/Search trim the Text if it contain a special characters like &,Ammar Alnaimat,New,Maestro,2 - High,Bug,
+454952,Bug,"Consumers Website/ Establishments / Establishment Normal Search//After pressing the Add to Favorites button, the button does not become unclickable",Ammar Alnaimat,New,Configuration; Maestro,2 - High,Configuration,Add Disable condition on button in listview
+455025,Bug,Consumers Website/ Establishments / Establishment Normal Search/ the rating reviews should be added to the page.,Ammar Alnaimat,New,Feature; Maestro,2 - High,Feature,
+455126,Bug,Public Page/ all tabs inside the public page / Error message appears when change the language of the page.,Ammar Alnaimat,New,Maestro,2 - High,Done,Old Bug
+450469,Bug,"View Profile: There is a new mandatory field in the user's file, and the save button does not work until it is filled out.",Ammar Alnaimat,New,Maestro,2 - High,Not Bug,"After contact with Anzawi , Its mandetory field"
+440649,Bug,BackOffice / Feedback Request & Inquiry - Review: The consumer information in the request does not match to the applicant.,Ammar Alnaimat,New,Maestro,2 - High,Configuration,
+452272,Bug,Backoffice / Establishment profile / Date: the date of inquiry and survey not correct.,Ammar Alnaimat,New,Maestro,2 - High,Not Bug,Server Date Issue
+455486,Bug,"Backoffice / My task history: When user click on view request, an error message appear and no data found.",Ammar Alnaimat,New,Maestro,2 - High,Bug Wedgit,Discus with Anas
+455512,Bug,Backoffice / My task history: The applicant name is not correct.,Ammar Alnaimat,New,Maestro,2 - High,Bug Wedgit,Discus with Anas
+441307,Bug,Consumers Website/ Informative Pages / Home Page/ Duplication for Consumer in the list in home page.,Ammar Alnaimat,New,Maestro,2 - High,Old bug,Discus with Anas
+432320,Bug,"Establishments Portal \ Establishment \ Print Sticker: When the establishment user click on print sticker and open it, it is not the correct sticker.",Ammar Alnaimat,New,Maestro,2 - High,,Discus with Anas
+442272,Bug,"Establishments Portal \Language: When the user switches the language from English to Arabic, some fields are not translated.",Ammar Alnaimat,New,Maestro,2 - High,Configuration,Translation
+443653,Bug,Establishments Portal \ Home page: The search in home page does not work.,Ammar Alnaimat,New,Maestro,2 - High,Old Bug,
+451435,Bug,View User Profile/Accepted Updating a user email with another user's email,Ammar Alnaimat,New,Maestro,2 - High,Attachment not work,Attachment not work
+458611,Bug,Establishment Portal / Re-evaluation request: An error message appeared after submitted the request.,Ammar Alnaimat,New,Maestro,2 - High,Configuration,
+458628,Bug,Establishment Portal / My Requests / Date: the start & end date field should not accept future date.,Ammar Alnaimat,New,Maestro,3 - Medium,Bug,Discus with Anas
+456682,Bug,"Establishments Portal \ Establishment \ My Requests\request type drop down list : Request Type Drops List It contains 4 requests, and it shows one request, which is the reevaluation.",Ammar Alnaimat,New,Configuration; Maestro,3 - Medium,Not Bug,Discus with Anas
+456688,Bug,Establishments Portal \ Establishment \ My Requests// request details incorrect data.,Ammar Alnaimat,New,Maestro,3 - Medium,Configuration,
+457711,Bug,Establishments Portal \ Establishment \ My Requests: cleared filters after user click on back button from view request,Ammar Alnaimat,New,Maestro,3 - Medium,Remove,Discus with Anas
+458169,Bug,Establishments Portal \ Establishment \ My Requests :Calendar UI Is Not Fine,Ammar Alnaimat,New,Maestro,3 - Medium,Design,Discus with Anas
+441335,Bug,"Establishments Portal \ Establishment \ My Requests\View User Profile\The label for ""Previous"" overlapped with Page number.",Ammar Alnaimat,New,Maestro,3 - Medium,Design,
+441352,Bug,Establishments Portal \ Establishment \ Establishment Profile\The labels for Dashboards needs enhancement.,Ammar Alnaimat,New,Maestro,3 - Medium,Configuration,
+455566,Bug,"Backoffice / My task history / State: My task history only contains the ""completed requests"", but there is a field ""state"" have two types.",Ammar Alnaimat,New,Maestro,3 - Medium,Bug Wedgit,
+456035,Bug,Consumer Portal / User profile: There is random data in the profile.,Ammar Alnaimat,New,Maestro,3 - Medium,Not Bug,Discus with Anas
+457712,Bug,"Consumer website / Search : The design of ""Establishment Rating"" need enhancement.",Ammar Alnaimat,New,Maestro,3 - Medium,Design Maestro,
+457015,Bug,"Backoffice Portal / Survey history request: A design of ""view button"" in survey request need enhancement.",Ammar Alnaimat,New,Configuration; Maestro,3 - Medium,Configuration,
+459963,Bug,Consumer Portal / View Consumer Profile / Change password: The success message after changing the password does not disappear.,Ammar Alnaimat,New,Maestro,3 - Medium,Bug,
+448409,Bug,"Consumers Website/ Home Page: The word ""بوابة المستهلكين"" in home page is not in the correct location.",Ammar Alnaimat,New,Maestro,4 - Low,Not Bug,
+455852,Bug,Backoffice portal / Establishment profile: The design need enhancement (in arabic mode),Ammar Alnaimat,New,Maestro,4 - Low,Bug,
+451440,Bug,View User Profile\Change Password Languge Error,Ammar Alnaimat,New,Maestro,4 - Low,Bug,Need translation to this lables
+456620,Bug,Establishments Portal \ Establishment \ My Requests: There is a Submit button on the Request screen and it is not needed,Ammar Alnaimat,New,Maestro,4 - Low,,

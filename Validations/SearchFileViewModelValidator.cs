@@ -15,7 +15,7 @@ namespace Validations
         {
             
 
-            RuleFor(model => model.fileName).NotEmpty().NotNull().WithMessage("FileNameRequired");
+            RuleFor(model => model.fileName).NotEmpty().NotNull().WithMessage("FileNameRequired").Must(val => Regex.IsMatch(val, "[{1,}[.csv]|[{1,}.CSV]")).WithMessage("Invalid file name or type");
             RuleFor(model => model.SearchText).NotEmpty().NotNull().WithMessage("SearchTextRequired");
         }
 

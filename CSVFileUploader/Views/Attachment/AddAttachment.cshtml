@@ -6,21 +6,21 @@
 
 
 <form method="post" enctype="multipart/form-data" id="formUpload">
-    <div class="row">
+  
         <div class="form-group">
             @Html.Label("", "Attachment", new { @class = "control-label" })
-            <input type="file" name="fileUpload" id="fileUpload" />
+            <input type="file" name="fileUpload" id="fileUpload" class="form-control" />
         </div>
 
-    </div>
+   
 
-    <div class="row">
+    
         <div class="form-group">
 
-            <input type="button" id="buttonSubmitFormUpload" value="Post file" />
+        <input type="button" id="buttonSubmitFormUpload" class="form-control" value="Post file" />
          
         </div>
-    </div>
+   
 </form>
 <div id="divSearchFile" style="display:none">
     @Html.Partial("SearchAttachment.cshtml")
@@ -34,6 +34,7 @@
             var url = "@Url.Action("Post", "FileStorage")"
             
             $("#buttonSubmitFormUpload").click(function () {
+                clearError()
                 var form = $("#formUpload");
 
                 // you can't pass Jquery form it has to be javascript form object
@@ -48,6 +49,7 @@
                     success: function () {
                         $("#divSearchFile").css("display", "block")
                         $("#txtfileName").val($('#fileUpload')[0].files[0].name )
+                        addSearchTextButtonHandler()
                     }
                     ,
                     error: function (e) {

@@ -15,7 +15,7 @@ namespace Validations
             //Keyvalue = keyvalue;
             //RuleFor(model => model.backWood).StringValueMustBeEnum(typeof(Wood));
 
-            RuleFor(model => model.FileName).Must(val => Regex.IsMatch(val, ".{1,}.csv")).WithMessage("Invalid file name or type");
+            RuleFor(model => model.FileName).Must(val => Regex.IsMatch(val, "[{1,}[.csv]|[{1,}.CSV]")).WithMessage("Invalid file name or type");
         }
       
     }

@@ -54,7 +54,7 @@ namespace CSVFileUploader.Controllers
 
         [HttpPost]
         [Route("SearchFile")]
-        public IActionResult SearchFile(SearchFileViewModel data)
+        public IActionResult SearchFile(SearchFileViewModel searchFileViewModel)
         {
 
 
@@ -65,10 +65,10 @@ namespace CSVFileUploader.Controllers
 
 
 
-                List<string> SearchResult = _searchFileViewModelService.SearchFile("","");
+                List<string> SearchResult = _searchFileViewModelService.SearchFile(searchFileViewModel);
 
 
-                return Ok(SearchResult);
+                return Ok(new { result = SearchResult });
             }
             catch (Exception ex)
             {

@@ -57,6 +57,53 @@
             $("#divError").css("display", "block")
             $("#PError").html(responseText)
         }
+        function addSearchTextButtonHandler() {
+            $("#buttonSubmitFormSearch").click(function () {
+
+
+                clearError()
+                var tableBody = $("table tbody");
+                tableBody.html('')
+                var url = "@Url.Action("SearchFile", "FileStorage")"
+                var formData = {
+                    'fileName': $("#txtfileName").val(), 'SearchText': $("#txtSearchText").val()
+                }
+
+
+                $.ajax({
+                    type: 'POST',
+                    url: url,
+
+                    data: JSON.stringify(formData),
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (data) {
+
+                       
+                        
+                        if (data.result.length == 0) {
+                            tableBody.append("<tr><td>no result found</td></tr>");
+
+                        }
+                        for (var i = 0; i < data.result.length; i++) {
+
+                            markup = "<tr><td>"
+                                + data.result[i] + "</td></tr>";
+
+                            tableBody.append(markup);
+
+                        }
+
+
+
+                    },
+                    error: function (e) {
+
+                        showError(e.responseText)
+                    }
+                })
+            })
+        }
     </script>
     @RenderSection("Scripts", required: false)
 </body>
