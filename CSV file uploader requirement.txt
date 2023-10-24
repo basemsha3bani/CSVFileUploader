@@ -1,0 +1,47 @@
+The objective of this assessment is to gauge your proficiency in .NET Backend development. 
+This test aims to delve into your knowledge, problem-solving abilities, 
+and practical skills related to creating robust and efficient backend solutions using the .NET framework.
+ By evaluating your performance in this domain, we seek to understand your capacity to design, implement,
+ and optimize backend systems, ensuring a comprehensive assessment of your skills in the context of .NET development.
+
+ Good luck!
+
+************************************
+About Task :
+ build a web application that allows users to load a CSV file with preformatted data and display the data as json through the API. 
+The application should also include a search parameter that allows users to search for data within the loaded CSV file.
+
+**************************************
+
+- include automated tests for backend.
+
+- You can also try by username sp-tests.
+
+- Backend should work by running a command like 
+"dotnet run --project Project.Name --other-parameters" and should execute the tests by running a command such as "dotnet test Project.Name --other-parameters" (write these instruction on README.md).
+
+- CSV uses commas to split the fields and not use  " ; ".
+**********************
+use version:
+ .NET 5 or greater, using C#.
+
+************************
+Features must include :
+
+- The backend must include the following endpoints:
+(POST /api/Files) An endpoint that accepts a CSV file upload from the client and stores the data in a database or a data structure. You should use the key "file" in the body request.
+(GET /api/Users) Should include an endpoint that allows the frontend to search through the loaded CSV data. This route should accept a ?q= query parameter for search terms and should search through EVERY column of the CSV. The filter should search for partial matches and also be case insensitive.
+
+- error handling for invalid requests or other errors.
+- The usage of a database is not requirment , but if you decide to use one, use SQLite
+
+*************************
+example of the CSV file we'll test on your app:
+
+name,city,country,favorite_Programming_language
+Mohamed,Amman,Jordan,C#
+Ali,Amman,Jordan,python
+saleem mohd,Irbd,Jordan,Java
+Kamal Jbr,zarqa,Jordan,python
+Talal,Amman,Jordan,Ruby
+
