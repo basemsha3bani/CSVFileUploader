@@ -1,0 +1,28 @@
+﻿@using  Domain.ViewModel
+@model MenuDisplayViewModel;
+
+@using (Html.BeginForm("Search", "Test", FormMethod.Post))
+{
+
+    <table>
+        <tr>
+            @Html.RadioButtonFor(m => m.userType, UserType.Student, new { @name = "radio", @type = "radio", @id = "Student" })
+            Student
+            @Html.RadioButtonFor(m => m.userType, UserType.Teacher, new { @name = "radio", @type = "radio", @id = "Teacher" })
+            Teacher
+            <td><button type="submit">Display Menu</button></td>
+
+        </tr>
+
+        @foreach (var item in Model.menuItems)
+        {
+            <tr>
+                <td>
+                    <a href="@Url.Action(item.Action,item.Controller)">@item.LinkText</a>
+                </td>
+                
+
+            </tr>
+        }
+    </table>
+}
