@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using  Domain.ViewModel
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -24,6 +25,14 @@
                         <li class="nav-item">
                             <a href="@Url.Action("SearchAttachment","Attachment")" class="nav-link text-dark">Search file</a>
                         </li>
+                        @{
+                            MenuDisplayViewModel menuDisplay = new MenuDisplayViewModel();
+                        }
+
+                        
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index","Test",new { MenuDisplayViewModel = menuDisplay } )" class="nav-link text-dark">TestMenu</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -48,61 +57,14 @@
         $(document).ready(
             clearError
         )
-            function clearError() {
-            
+        function clearError() {
+
             $("#divError").css("display", "none")
             $("#PError").html("")
         }
         function showError(responseText) {
             $("#divError").css("display", "block")
             $("#PError").html(responseText)
-        }
-        function addSearchTextButtonHandler() {
-            $("#buttonSubmitFormSearch").click(function () {
-
-
-                clearError()
-                var tableBody = $("table tbody");
-                tableBody.html('')
-                var url = "@Url.Action("SearchFile", "FileStorage")"
-                var formData = {
-                    'fileName': $("#txtfileName").val(), 'SearchText': $("#txtSearchText").val()
-                }
-
-
-                $.ajax({
-                    type: 'POST',
-                    url: url,
-
-                    data: JSON.stringify(formData),
-                    contentType: 'application/json; charset=utf-8',
-                    dataType: 'json',
-                    success: function (data) {
-
-                       
-                        
-                        if (data.result.length == 0) {
-                            tableBody.append("<tr><td>no result found</td></tr>");
-
-                        }
-                        for (var i = 0; i < data.result.length; i++) {
-
-                            markup = "<tr><td>"
-                                + data.result[i] + "</td></tr>";
-
-                            tableBody.append(markup);
-
-                        }
-
-
-
-                    },
-                    error: function (e) {
-
-                        showError(e.responseText)
-                    }
-                })
-            })
         }
     </script>
     @RenderSection("Scripts", required: false)
